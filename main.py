@@ -18,7 +18,9 @@ arregloIndicadoresCalidad = [IndicadorCalidad('Enfermedades', 0, 1),
 encargadoDeCompras = EncargadoDeCompras('Batista','Juan', '33032')                
 
 # Creo un contrato
-contrato = Contrato(1, 'Contrato Campodonico', Cereal('Trigo'), encargadoDeCompras, arregloIndicadoresCalidad, 200, DATE, '29/10/2022', 4500, 'U$D')
+contrato = Contrato(1, 'Contrato Campodonico', Cereal('Trigo'), 
+                    encargadoDeCompras, arregloIndicadoresCalidad, 200, 
+                    DATE, '29/10/2022', 4500, 'U$D')
 
 # Establezco el peso neto del cargamento
 pesoNeto = 33
@@ -44,5 +46,5 @@ s5 = Silo('silo5', Cereal('Maiz'), valIndSilo01)
 # Defino una lista de Silos
 arregloSilos = [s1,s2,s3,s4,s5]
 
-# Llamo a la funcion setSilo()
+# Llamo a la funcion setSilo()                 arregloIndicadoresCalidad..?
 Silo.setSilo(arregloSilos, pesoNeto, contrato, contrato.indicadoresCalidad, valoresIndicadorCalidadCartaDePorte)
