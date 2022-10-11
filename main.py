@@ -21,4 +21,4 @@ s5 = Silo('silo5')
 
 arregloSilos = [s1,s2,s3,s4,s5]
 
-s1.setSilo(arregloSilos, pesoNeto, contrato, arregloIndicadoresCalidad, valoresIndicadorCalidadCartaDePorte)
+Silo.setSilo(arregloSilos, pesoNeto, contrato, arregloIndicadoresCalidad, valoresIndicadorCalidadCartaDePorte)
