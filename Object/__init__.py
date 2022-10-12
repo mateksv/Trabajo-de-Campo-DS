@@ -3,3 +3,15 @@ from Object.IndicadorCalidad import IndicadorCalidad
 from Object.Contrato import Contrato
 from Object.Silo import Silo
 from Object.EncargadoDeCompras import EncargadoDeCompras
+from Object.Recibidor import Recibidor
+from Object.Pais import Pais
+from Object.Provincia import Provincia
+from Object.Ciudad import Ciudad
+from Object.Direccion import Direccion
+from Object.Proveedor import Proveedor
+from Object.EmpresaDeTransporte import EmpresaDeTransporte
+from Object.Transportista import Transportista
+from Object.Transporte import Transporte
+from Object.Modelo import Modelo
+from Object.Marca import Marca
+from Object.CartaDePorte import CartaDePorte
