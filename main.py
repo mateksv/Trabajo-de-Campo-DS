@@ -10,7 +10,7 @@ valoresIndicadorCalidadCartaDePorte = [IndicadorCalidad('Enfermedades', 0, 1),
                                        IndicadorCalidad('Ph', 7, 9)]
 
 # Defino la lista de Indicadores de Calidad para el contrato
-arregloIndicadoresCalidad = [IndicadorCalidad('Enfermedades', 0, 1), 
+listaIndicadoresCalidad = [IndicadorCalidad('Enfermedades', 0, 1), 
                              IndicadorCalidad('Gluten', 30, 50), 
                              IndicadorCalidad('Ph', 7, 9)]
 
@@ -19,7 +19,7 @@ encargadoDeCompras = EncargadoDeCompras('Batista','Juan', '33032')
 
 # Creo un contrato
 contrato = Contrato(1, 'Contrato Campodonico', Cereal('Trigo'), 
-                    encargadoDeCompras, arregloIndicadoresCalidad, 200, 
+                    encargadoDeCompras, listaIndicadoresCalidad, 200, 
                     DATE, '29/10/2022', 4500, 'U$D')
 
 # Establezco el peso neto del cargamento
@@ -44,7 +44,10 @@ s4 = Silo('silo4', Cereal('Cebada'), valIndSilo02)
 s5 = Silo('silo5', Cereal('Maiz'), valIndSilo01)
 
 # Defino una lista de Silos
-arregloSilos = [s1,s2,s3,s4,s5]
+listaSilos = [s1,s2,s3,s4,s5]
+
+# Creo una Carta de Porte
+cartaDePorte = CartaDePorte('Carta01')
 
 # Llamo a la funcion setSilo()                 arregloIndicadoresCalidad..?
-Silo.setSilo(arregloSilos, pesoNeto, contrato, contrato.indicadoresCalidad, valoresIndicadorCalidadCartaDePorte)
+cartaDePorte.setSilo(listaSilos, pesoNeto, contrato, contrato.indicadoresCalidad, valoresIndicadorCalidadCartaDePorte)
