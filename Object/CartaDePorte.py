@@ -3,7 +3,7 @@ from Object import Contrato, IndicadorCalidad, Silo
 class CartaDePorte():
     def __init__(self, nombre: str):
         self.nombre = nombre
-        self.silo = self.setSilo()
+        self.silo = 'Not Asigned'
     
     def setSilo(self, listaSilos: list[Silo], pesoNeto: float, contrato: Contrato, arregloIndicadoresCalidad: list[IndicadorCalidad], valoresIndicadorCalidadCartaDePorte: list[IndicadorCalidad]) -> Silo:
         '''Filtra los Silos disponibles y adecuados para depositar el cereal'''
@@ -15,4 +15,4 @@ class CartaDePorte():
                         for indCartaPorte in arregloIndicadoresCalidad: # Por cada Indicador de Calidad en la Lista pasada por parametro:
                             if indSilo.nombre == indCartaPorte.nombre: # Si coinciden los nombres de los Indicadores:
                                 if (indCartaPorte.valor >= indSilo.valorDesde) and (indCartaPorte.valor <= indSilo.valorHasta): # Si el valor especifico de indCartaPorte esta dentro del rango de los Silos:
-                                    print(silo)
+                                    print(silo.getJson())

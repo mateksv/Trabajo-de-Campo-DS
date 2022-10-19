@@ -1,5 +1,6 @@
 import time
 from Object import *
+from utilities import *
 
 # Fecha actual
 DATE = time.strftime("%d/%m/%Y", time.localtime())

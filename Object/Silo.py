@@ -9,6 +9,8 @@ class Silo():
         self.capacidadMaxima = 200
         self.valoresIndicadorSilo = valoresIndicadorSilo
 
+    def getJson(self):
+        return {'nombre': self.nombre, 'cereal': self.cereal, 'capacidadMaxima': self.capacidadMaxima, 'capacidadActual': self.capacidadActual}
     def __str__(self):
         texto = "    : {0} : : {1} : : {2} : : {3} :"
         return texto.format(self.nombre, self.cereal, self.capacidadMaxima, self.capacidadActual)
