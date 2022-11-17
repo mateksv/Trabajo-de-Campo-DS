@@ -4,3 +4,5 @@ class IndicadorCalidad():
         self.valorDesde = valorDesde
         self.valorHasta = valorHasta
         self.valor = 37
+    
+    

@@ -1,3 +1,4 @@
+
 from Object import Cereal, IndicadorCalidad
 
 class Silo():
@@ -16,6 +17,7 @@ class Silo():
         texto = "    : {0} : : {1} : : {2} : : {3} :"
         return texto.format(self.nombre, self.cereal, self.capacidadMaxima, self.capacidadActual)
     
+
 
         
 

@@ -1,5 +1,22 @@
+import json
+from flask import Flask, request, render_template
 import time
 from Object import *
+
+app = Flask(__name__) # Inicializo Flask
+
+
+@app.route('/')
+def index():
+    return render_template("index.html")
+
+@app.route('/encargado')
+def encargado():
+    return "encargadoDeCompras"
+
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Fecha actual
 DATE = time.strftime("%d/%m/%Y", time.localtime())
@@ -51,3 +68,23 @@ cartaDePorte = CartaDePorte('Carta01')
 
 # Llamo a la funcion setSilo()                 arregloIndicadoresCalidad..?
 cartaDePorte.setSilo(listaSilos, pesoNeto, contrato, contrato.indicadoresCalidad, valoresIndicadorCalidadCartaDePorte)
+
+
+
+
+def convertir(objeto: object):
+    try:
+        jsonSTR = json.dumps(objeto.__dict__)
+        return jsonSTR
+    except Exception as ex:
+        print("\n>>>>> ERROR >>>>>", ex)
+        for dato in objeto:
+            if type(dato) == list:
+                for n in dato:
+                    nJsonSTR = convertir(n)
+                
+        
+
+
+print(convertir(cartaDePorte))
+print(convertir(encargadoDeCompras))

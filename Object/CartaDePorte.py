@@ -1,9 +1,10 @@
 from Object import Contrato, IndicadorCalidad, Silo
 
 class CartaDePorte():
-    def __init__(self, nombre: str):
+    def __init__(self, nombre: str ):
         self.nombre = nombre
-        self.silo = self.setSilo()
+        self.silo = 'No Asignado'
+
     
     def setSilo(self, listaSilos: list[Silo], pesoNeto: float, contrato: Contrato, arregloIndicadoresCalidad: list[IndicadorCalidad], valoresIndicadorCalidadCartaDePorte: list[IndicadorCalidad]) -> Silo:
         '''Filtra los Silos disponibles y adecuados para depositar el cereal'''
